@@ -1,0 +1,58 @@
+{
+  "sainath": [
+    {
+      "id": 1,
+      "name": "sai",
+      "emailid": "",
+      "password": ""
+    },
+    {
+      "Name": "sainath",
+      "Emailid": "sainath@gmail.com",
+      "Phonenumber": "9876543210",
+      "Newpassword": "ram",
+      "id": 2
+    },
+    {
+      "Fullname": "sai",
+      "Emailid": "sai@gmail.com",
+      "Phonenumber": "9876543210",
+      "dob": "2023-02-21",
+      "gender": "123",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "UserName": "sai",
+      "Emailid": "sai@gmail.com",
+      "Phonenumber": "9876543210",
+      "Newpassword": "123",
+      "id": 4
+    },
+    {
+      "Fullname": "",
+      "Emailid": "",
+      "Phonenumber": "",
+      "dob": "",
+      "gender": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "Fullname": "sai",
+      "Emailid": "sai@gmail.com",
+      "Phonenumber": "9876543210",
+      "dob": "2023-03-01",
+      "gender": "562",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "UserName": "sai",
+      "Emailid": "sai@gmail.com",
+      "Phonenumber": "9876543210",
+      "Newpassword": "123",
+      "id": 7
+    }
+  ]
+}

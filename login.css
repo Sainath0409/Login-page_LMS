@@ -3,10 +3,13 @@
     margin: 0;
     box-sizing: border-box; 
 }
+#error{
+    color: red;
+}
 #nav{
     height: 40px;
     width: 100%;
-    background-color: whitesmoke;
+    background-color:whitesmoke;
     /* border: 2px solid black; */
 }
 #nav>img{
@@ -15,19 +18,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-#error{
-    color: red;
-}
+/* #i{
+    background-image: url(../image/b9.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover ;
+    filter: brightness(100%);
+} */
 #lg{
     margin-top: 65px;
     border-radius: 30px;
     height: 250px;
     width: 350px;
-    background-color:rgb(45, 214, 205);
+    background-color:rgb(45, 214,205);
     position: absolute;
     left: 970px;
+
 }
 #login{
     /* margin-top: 0px; */
@@ -64,6 +71,15 @@
     font-size: medium;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* #su{
+    margin-top: 330px;
+    border-radius: 30px;
+    height: 90px;
+    width: 240px;
+    background-color:rgb(43, 208, 200);
+    position: absolute;
+    left: 1025px;  
+} */
 #signup{
 height: 90px;
 width: 240px;

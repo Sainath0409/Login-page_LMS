@@ -52,10 +52,9 @@ const NewRegister = () => {
         Navigate("/");
         }
        
-        
         if(password!=Rewritepassword){
             setError(true);
-            //Navigate("/")
+            // Navigate("/");
         }
 
        else{
@@ -63,36 +62,29 @@ const NewRegister = () => {
         .then(()=>{
             console.log("Data has been Added");
         })
-        // Navigate("/")
+        // Navigate("/");
        }
     }
   return (
     <section>
         <div id='nav'>
         <img src={pc} alt="" />
-        <h3 > Admin Registration Portal</h3>
+        <h3 > Student's Registation Portal</h3>
         </div>
-        <br /><br />
-        <div id='l1'>
-        <img src={pic} alt="" />
+        <br /> <br />
+        <div id='design'>
+        
+            <img src={pic} alt="" />
         </div>
-
+         
         <div id='new'>
         <table> 
        <tr>
-            <td><label htmlFor="">User Name : </label></td>
-            <td><input type="text" placeholder='User name' value={Fullname} onChange={NameData} required="required"/></td>
+            <td><label htmlFor="">Full Name : </label></td>
+            <td><input type="text" placeholder='Full name' value={Fullname} onChange={NameData} required="required" /></td>
         </tr>
         {error&&Fullname.length<=0?
-               <label id='error'>User Name can't be Empty</label>:""}
-        <tr>
-            <td><label htmlFor="">Company Id : </label></td>
-            <td>
-                <input type="number" placeholder='Id Number'value={gender} onChange={genderData} required="required"/>
-            </td>
-        </tr>
-        {error&&Emailid.length<=0?
-               <label id='error'>Company id can't be Empty</label>:""}
+               <label id='error'>Full Name can't be Empty</label>:""}
         <tr>
             <td><label htmlFor="">Email Id : </label></td>
             <td><input type="email" placeholder='abc@gmail.com' value={Emailid} onChange={mailData} required="required"/></td>
@@ -107,10 +99,20 @@ const NewRegister = () => {
                <label id='error'> Number can't be Empty</label>:""}
         <tr>
             <td><label htmlFor="">D.O.B : </label></td>
-            <td><input type="date" value={dob} onChange={dobData} required="required" /></td>
+            <td><input type="date" value={dob} onChange={dobData} required="required"/></td>
         </tr>
         {error&&dob.length<=0?
                <label id='error'>DOB can't be Empty</label>:""}
+        <tr>
+            <td><label htmlFor="">Gender : </label></td>
+            <td>
+                <input type="radio"name='gender' value="male" onChange={genderData} required="required"/>Male
+                <input type="radio"name='gender' value="female" onChange={genderData} required="required"/>Female
+                <input type="radio"name='gender' value="other" onChange={genderData} required="required"/>Other
+            </td>
+        </tr>
+        {error&&gender.length<=0?
+               <label id='error'>Gender can't be Empty</label>:""}
         <tr>
             <td><label htmlFor="">Password : </label></td>
             <td><input type="password"  placeholder='strong Password' value={password} onChange={passwordData} required="required"/> </td>

@@ -7,15 +7,15 @@ import axios from "axios";
 
 
 const Forgetpassword = () => {
-  let[UserName,setUsername]=useState("");
+  let[Name,setname]=useState("");
   let[Emailid,setEmailid]=useState("");
   let[Phonenumber,setPhonenumber]=useState("");
   let[Newpassword,setNewpassword]=useState("");
   let [error,setError]=useState(false)
   let Navigate=useNavigate();
 
-  let UserNameData=(e)=>{
-    setUsername(e.target.value);
+  let NameData=(e)=>{
+    setname(e.target.value);
   }
 let mailData=(e)=>{
     setEmailid(e.target.value)
@@ -28,44 +28,52 @@ let newpasswordData=(e)=>{
   }
 let formhandle=(e)=>{
   e.preventDefault()
-  let payload={UserName,Emailid,Phonenumber,Newpassword}
+  let payload={Name,Emailid,Phonenumber,Newpassword}
 
-  if(UserName.length==0||Emailid.length==0||Phonenumber.length==0||Newpassword.length==0){
+  if(Name.length==0||Emailid.length==0||Phonenumber.length==0||Newpassword.length==0){
     setError(true)
   }
-  if(UserName&&Emailid&&Phonenumber&&Newpassword)
+  if(Name&&Emailid&&Phonenumber&&Newpassword)
   {
-  console.log(" UserName: ",UserName,"\nEmail id: ",Emailid,"\nphonenumber: ",Phonenumber,"\nRewritepassword: ",Newpassword)
+  console.log(" Name: ",Name,"\nEmail id: ",Emailid,"\nphonenumber: ",Phonenumber,"\nRewritepassword: ",Newpassword)
   Navigate("/");
   }
 
-  
+
+
+  else{
   axios.post("http://localhost:3000/sainath",payload)
   .then(()=>{
     console.log("Data has beed Updated");
   })
-  // Navigate("/")
+  // Navigate("/");
+}
 
+  
 }
   return (
-    <div>
+    <div >
+
       <div id='nav'>
       <img src={pc} alt="" />
-        <h3 > Forgot Password ??</h3>
+        <h3 >Forget Password ??? </h3>
+        
       </div>
+
       <br /><br />
+
       <div id='l1'>
-        <img src={pic} alt="" />
+      <img src={pic} alt="" />
       </div>
 
       <div id='forgot'>
       <table>
     <tr>
-        <td><label htmlFor="">User Name : </label></td>
-        <td><input type="text" placeholder='Register Name' value={UserName} onChange={UserNameData} required="required"/></td>
+        <td><label htmlFor="">Name : </label></td>
+        <td><input type="text" placeholder='Register Name' value={Name} onChange={NameData} required="required"/></td>
     </tr>
-    {error&&UserName.length<=0?
-               <label id='error'> User Name can't be Empty</label>:""}
+    {error&&Name.length<=0?
+               <label id='error'> Name can't be Empty</label>:""}
     <tr>
         <td><label htmlFor="">Email id : </label></td>
         <td><input type="email" name="" id="" placeholder='abc@gmail.com' value={Emailid} onChange={mailData} required="required"/></td>
@@ -74,7 +82,7 @@ let formhandle=(e)=>{
                <label id='error'>Email id can't be Empty</label>:""}
     <tr>
         <td><label htmlFor="">Phone Number : </label></td>
-        <td><input type="number" name="" id="" placeholder='Register Contact Number'value={Phonenumber} onChange={phoneData} required="required"/></td>
+        <td><input type="number" name="" id="" placeholder='Register Contact Number'value={Phonenumber} onChange={phoneData} required="required" /></td>
     </tr>
     {error&&Phonenumber.length<=0?
                <label id='error'>Number can't be Empty</label>:""}
@@ -91,6 +99,7 @@ let formhandle=(e)=>{
       </table>
 
       </div>
+      
     </div>
   )
 }

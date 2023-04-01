@@ -29,8 +29,24 @@
       "gender": "male",
       "password": "123",
       "id": 4
+    },
+    {
+      "Fullname": "a",
+      "Emailid": "a",
+      "Phonenumber": "123",
+      "dob": "",
+      "gender": "male",
+      "password": "aaa",
+      "id": 5
+    },
+    {
+      "Fullname": "a",
+      "Emailid": "",
+      "Phonenumber": "",
+      "dob": "",
+      "gender": "male",
+      "password": "a",
+      "id": 6
     }
-   
-    
   ]
 }
